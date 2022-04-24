@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mohamad Irfan</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="center">
+      <h1>Login <br> <p>Mohamad Irfan F52120009</p></h1>
+      
+      <form method="post">
+        <div class="txt_field">
+          <input type="text" required>
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" required>
+          <span></span>
+          <label>Password</label>
+        </div>
+        <input type="submit" value="Login" onclick="login()">
+       
+      </form>
+      <form action="">
+      <h3 class="text-center mt-2" style="text-align: center ;"> User Yang Terdaftar</h3>
+      <table class="table table-hover mt-3">
+        <thead>
+          <tr>
+            <th scope="col">No.</th>
+            <th scope="col">Nama</th>
+            <th scope="col">Email</th>
+            <th scope="col">Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Irfan</td>
+            <td>Irfan@gmail.com</td>
+            <td><button class="btn btn-danger"  onclick="hapus()">Hapus</button>
+            <button class="btn btn-warning" onclick="ubah()">Ubah</button></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Choper</td>
+            <td>choper@gmail.com</td>
+            <td><button class="btn btn-danger"  onclick="hapus()">Hapus</button>
+            <button class="btn btn-warning" onclick="ubah()">Ubah</button></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>niko</td>
+            <td>Niko@gmail.com</td>
+            <td><button class="btn btn-danger" onclick="hapus()">Hapus</button>
+            <button class="btn btn-warning" onclick="ubah()">Ubah</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+    </div>
+    
+    <script src="sweetalert.mim.js"></script>
+    <script>
+      function login(){
+        Swal.fire(
+        'Good job!',
+        'You clicked the button!',
+        'success'
+      )
+      }
+    </script>
+     <script>
+      function hapus() {
+  Swal.fire(
+     'Yakin ingin menghapus data ini?',
+     'dengan menekan tombol Ok,maka data akan terhapus secara permanen!',
+     'error'
+ )
+ }
+ </script>
+
+  <!-- Ubah -->
+  <script>
+     function ubah() {
+ Swal.fire(
+    'Ubah data ini?',
+    'Ubah data Mahasiswa!',
+    'question'
+)
+}
+</script>
+  </body>
+</html>
